@@ -16,7 +16,7 @@ header {
     background-color: lightgray;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 30px;
 
 }
 
@@ -28,8 +28,28 @@ header > a {
 
 .card-container {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 }
 
 .card {
-    background-color: lightgray;
+    background-color: darkgray;
+    border-radius: 10px;
+    width: 50vw;
+    min-height: 50px;
+    padding: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.button-container > button {
+    font-size: 3rem;
+    padding: 10px;
+    padding-top: 30px;
 }
