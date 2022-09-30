@@ -37,9 +37,12 @@ header > a {
 .card {
     background-color: darkgray;
     border-radius: 10px;
-    width: 50vw;
+    width: 75vw;
     min-height: 50px;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .button-container {
@@ -52,4 +55,25 @@ header > a {
     font-size: 3rem;
     padding: 10px;
     padding-top: 30px;
+}
+
+.btn-delete {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.btn-read {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-read > button {
+    width: 100px;
+    height: 100px;
+}
+
+.book-title {
+    font-size: 2rem;
 }
