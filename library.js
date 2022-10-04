@@ -114,6 +114,11 @@ function generateCard(bookTitle, bookAuthor, bookPages, bookRead, bookIndex) {
     let btnDelete = document.createElement('button');
     btnDelete.setAttribute("data-index", bookIndex);
     btnDelete.textContent = 'DELETE';
+    btnDelete.addEventListener('click', function () {
+        let bookIndex = +this.getAttribute("data-index");
+        myLibrary.splice(bookIndex, 1);
+        updateLibrary();
+    });
 
     btnDeleteDiv.appendChild(btnDelete);
 
