@@ -71,8 +71,16 @@ function generateCard(bookTitle, bookAuthor, bookPages, bookRead, bookIndex) {
 
     } else {
         btnRead.textContent = "UNREAD";
-        btnRead.classList.add("btn-unread-self");
     }
+
+    btnRead.addEventListener('click', function () {
+        this.classList.toggle("btn-read-self");
+        if (this.textContent == "READ") {
+            this.textContent = "UNREAD";
+        } else if (this.textContent == "UNREAD") {
+            this.textContent = "READ";
+        }
+    });
 
     btnReadDiv.appendChild(btnRead);
 
@@ -104,6 +112,7 @@ function generateCard(bookTitle, bookAuthor, bookPages, bookRead, bookIndex) {
     btnDeleteDiv.classList.add("btn-delete");
 
     let btnDelete = document.createElement('button');
+    btnDelete.setAttribute("data-index", bookIndex);
     btnDelete.textContent = 'DELETE';
 
     btnDeleteDiv.appendChild(btnDelete);

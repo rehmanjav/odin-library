@@ -74,6 +74,10 @@ header > a {
     height: 100px;
 }
 
+.btn-read-self {
+    background-color: lightgreen;
+}
+
 .book-title {
     font-size: 2rem;
 }
