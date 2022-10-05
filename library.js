@@ -128,3 +128,23 @@ function generateCard(bookTitle, bookAuthor, bookPages, bookRead, bookIndex) {
 }
 
 updateLibrary();
+
+// MODAL CODE
+
+let modal = document.querySelector(".modal");
+let opener = document.querySelector(".btn-newBook");
+let closer = document.querySelector(".close");
+
+opener.addEventListener('click', function () {
+    modal.style.display = "block";
+});
+
+closer.addEventListener('click', function () {
+    modal.style.display = "none";
+});
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
