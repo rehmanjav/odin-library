@@ -134,6 +134,7 @@ updateLibrary();
 let modal = document.querySelector(".modal");
 let opener = document.querySelector(".btn-newBook");
 let closer = document.querySelector(".close");
+let adder = document.querySelector(".btn-add");
 
 opener.addEventListener('click', function () {
     modal.style.display = "block";
@@ -148,3 +149,27 @@ window.onclick = function(event) {
       modal.style.display = "none";
     }
   }
+
+adder.addEventListener('click', function () {
+    let inputTitle = document.querySelector("#bookTitle");
+    let inputAuthor = document.querySelector("#bookAuthor");
+    let inputPages = document.querySelector("#bookPages");
+    let radioYes = document.querySelector(".bookYes");
+    let radioNo = document.querySelector(".bookNo");
+
+    let bookTitle = inputTitle.value;
+    let bookAuthor = inputAuthor.value;
+    let bookPages = inputPages.value;
+    let bookRead;
+    
+    if (radioYes.checked) {
+        bookRead = true;
+    } else if (radioNo.checked) {
+        bookRead = false;
+    }
+
+    console.log(bookTitle);
+    console.log(bookAuthor);
+    console.log(bookPages);
+    console.log(bookRead);
+});

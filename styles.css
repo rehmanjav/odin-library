@@ -132,7 +132,19 @@ header > a {
   .modal input {
     line-height: 2rem;
     font-size: 2rem;
-    width: 70%;
+    /* width: 70%; */
+    margin-left: 40px;
+  }
+
+  .modal input[type="radio"] {
+    font-size: 1.2rem;
+  }
+
+  .btn-add {
+    margin-left: 40%;
+    width: 8rem;
+    height: 5rem;
+    font-size: 2rem;
   }
 
 
