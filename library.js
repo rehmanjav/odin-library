@@ -164,12 +164,30 @@ adder.addEventListener('click', function () {
     
     if (radioYes.checked) {
         bookRead = true;
-    } else if (radioNo.checked) {
+    } else {
         bookRead = false;
     }
 
-    console.log(bookTitle);
-    console.log(bookAuthor);
-    console.log(bookPages);
-    console.log(bookRead);
+    if (bookTitle.length >= 1 &&
+        bookAuthor.length >= 1 &&
+        bookPages.length >= 1) {
+            console.log(bookTitle);
+            console.log(bookAuthor);
+            console.log(bookPages);
+            console.log(bookRead);
+
+            myLibrary.push({title: bookTitle,
+                            author: bookAuthor,
+                            pages: bookPages,
+                            read: bookRead});
+            
+            updateLibrary();
+            inputTitle.value = "";
+            inputAuthor.value = "";
+            inputPages.value = "";
+            radioNo.checked = true;
+            modal.style.display = 'none';
+    }
+
+    
 });
