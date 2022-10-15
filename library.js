@@ -171,17 +171,11 @@ adder.addEventListener('click', function () {
     if (bookTitle.length >= 1 &&
         bookAuthor.length >= 1 &&
         bookPages.length >= 1) {
-            console.log(bookTitle);
-            console.log(bookAuthor);
-            console.log(bookPages);
-            console.log(bookRead);
-
-            myLibrary.push({title: bookTitle,
-                            author: bookAuthor,
-                            pages: bookPages,
-                            read: bookRead});
+            let newBook = new Book(bookTitle, bookAuthor, bookPages, bookRead);
+            myLibrary.push(newBook);
             
             updateLibrary();
+
             inputTitle.value = "";
             inputAuthor.value = "";
             inputPages.value = "";
